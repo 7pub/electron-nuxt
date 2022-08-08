@@ -1,11 +1,19 @@
-<p align="center">
-    <a href="https://webspaceteam.com" target="_blank">
-        <img src="./build/icon.png" width="256" title="Electron-Nuxt Logo">
-    </a>
-</p>
+---
+
+---
+
+<center>
+
+   ![Electron-Nuxt Logo](./electron-nuxt/build/icon.png "Electron-Nuxt Logo")
+
+</center>
+
 <h1 align="center">Electron Nuxt</h1>  
+
 <p align="center">
+
    by <a href="https://webspaceteam.com" target="_blank">WebspaceTeam</a>
+
 </p>
 
 > Electron application boilerplate based on Nuxt.js for crossplatform desktop application development
@@ -43,7 +51,7 @@ $ npm run build:mac:store
 
 `/mainprocess` includes JavaScript for the Electron main process
 
-`/src` folder structure typical to any Nuxt.JS project 
+`/src` folder structure typical to any Nuxt.JS project
 
 ## MacOS
 
@@ -63,10 +71,9 @@ $ npm run build:mac:store
 
 + <a href="https://developer.apple.com/library/archive/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW1" target="_blank">Security Entitlements List</a>
 
+You need to create provisioning profile at developer.apple.com and place it to `build` folder as `embedded.provisionprofile`.
 
-You need to create provisioning profile at developer.apple.com and place it to `build` folder as `embedded.provisionprofile`. 
-
-### DMG distribution 
+### DMG distribution
 
 To distribute your application as DMG image it should be signed and notarized.
 
@@ -91,11 +98,10 @@ Steps to prepare your application for publication:
 `find -H YourAppBundle -print0 | xargs -0 file | grep "Mach-O .*executable"` (see <a href="https://developer.apple.com/library/archive/documentation/Security/Conceptual/AppSandboxDesignGuide/AppSandboxImplementationChecklist/AppSandboxImplementationChecklist.html#//apple_ref/doc/uid/TP40011183-CH8-SW1" target="_blank">source</a>). Binaries from `node_modules` can be unpacked by listing them in `asarUnpack` key in `package.json`.
 5. Build `dist/mas/$APP-mac_store.pkg` should be uploaded to Mac App Store via <a href="https://apps.apple.com/us/app/transporter/id1450874784?mt=12" target="_blank">Transporter</a> application
 
-
 ### Knowing issues
 
 + There is a bug in Electron builder. Only one target for `mac` can be specified.
 
-
 ## Licence
+
 MIT © [Electron Nuxt](https://github.com/webspaceteam/electron-nuxt) by <a href="https://webspaceteam.com" target="_blank"><img src="https://webspaceteam.com/assets/images/favicon/favicon-16x16.png"> WebspaceTeam</a>
