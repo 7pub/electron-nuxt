@@ -93,9 +93,6 @@
     "hot",
     "reload"
   ],
-  "dependencies": {
-    "electron-serve": "^0.4.1"
-  },
   "devDependencies": {
     "@babel/runtime-corejs2": "^7.8.0",
     "core-js": "^2.6.11",
@@ -107,7 +104,10 @@
     "nuxt": "^2.11.0",
     "sass": "^1.24.4",
     "sass-loader": "^8.0.1",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack": "^4.41.5"
+  },
+  "dependencies": {
+    "electron-serve": "1.1.0",
+    "webpack-cli": "4.10.0"
   }
 }
